@@ -6,6 +6,10 @@ public class SamplePMDIssues {
         SamplePMDIssues obj = new SamplePMDIssues();
         obj.doSomething();
     }
+     public static void main(String[] args) {
+        SamplePMDIssues obj = new SamplePMDIssues();
+        obj.doSomething();
+    }
 
     public void doSomething() {
         int i = 0;
