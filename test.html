@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+
+  <!-- Missing meta charset -->
+  <!-- Inline styles (bad practice) -->
+  <style>
+    body { font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <!-- Missing alt attribute -->
+  <img src="logo.png">
+
+  <!-- Non-semantic tag for navigation -->
+  <div id="nav">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- Inline event handler (bad practice) -->
+  <button onclick="alert('Hello')">Click Me</button>
+
+  <!-- Deprecated tag -->
+  <center>This is centered text using a deprecated tag.</center>
+
+  <!-- Unclosed tag -->
+  <p>This is an unclosed paragraph.
+
+  <!-- Poor contrast color example -->
+  <p style="color: #ccc; background: #eee;">Hard to read text</p>
+
+  <!-- ID used multiple times -->
+  <div id="duplicate"></div>
+  <div id="duplicate"></div>
+
+</body>
+</html>
