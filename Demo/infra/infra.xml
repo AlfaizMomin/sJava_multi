@@ -1,0 +1,26 @@
+<!-- Missing XML declaration -->
+<config>
+  <!-- Absolute file path (bad practice) -->
+  <log path="C:\logs\app.log" />
+
+  <!-- Duplicate ID attribute -->
+  <server id="srv1" ip="192.168.1.100" />
+  <server id="srv1" ip="192.168.1.101" />
+
+  <!-- Invalid character in tag name -->
+  <db-config>
+    <user>admin</user>
+    <pass>admin123</pass>
+    <port>8080</port>
+  </db-config>
+
+  <!-- Improper nesting -->
+  <services>
+    <service name="api">
+  </services>
+  </service>
+
+  <!-- Reference to missing external DTD -->
+  <!DOCTYPE config SYSTEM "config.dtd">
+
+</config>
