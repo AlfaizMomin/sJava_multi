@@ -12,12 +12,12 @@ public class VulnerableApp {
         String userInput = args[0];
         executeQuery("SELECT * FROM users WHERE name = '" + userInput + "'");  // Vulnerability: Unescaped user input
 
-        // 2. Command Injection
-        Runtime.getRuntime().exec("shutdown -s -t 0 " + args[1]);  // Issue: Unsanitized argument
-        System.out.println("Hello World");
-        // 3. Path Traversal
-        File file = new File("/var/data/" + args[2]);  // Vulnerability: User-controlled path
-        new FileInputStream(file);
+        // // 2. Command Injection
+        // Runtime.getRuntime().exec("shutdown -s -t 0 " + args[1]);  // Issue: Unsanitized argument
+        // System.out.println("Hello World");
+        // // 3. Path Traversal
+        // File file = new File("/var/data/" + args[2]);  // Vulnerability: User-controlled path
+        // new FileInputStream(file);
 
         // 4. Insecure Hashing (MD5)
         MessageDigest md = MessageDigest.getInstance("MD5");  // Issue: Broken cryptographic algorithm
@@ -43,6 +43,10 @@ public class VulnerableApp {
 
         // 10. Multiple issues on one line:
         new ProcessBuilder().command("cmd.exe /c echo " + userInput).start();  // Vulnerabilities: Command injection + Unescaped input
+
+      // 6. Resource Leak
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:test.db");
+        // Missing finally block to close connection
     }
 
     private static void executeQuery(String query) throws SQLException {
