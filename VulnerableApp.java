@@ -14,7 +14,7 @@ public class VulnerableApp {
 
         // 2. Command Injection
         Runtime.getRuntime().exec("shutdown -s -t 0 " + args[1]);  // Issue: Unsanitized argument
-
+        System.out.println("Hello World");
         // 3. Path Traversal
         File file = new File("/var/data/" + args[2]);  // Vulnerability: User-controlled path
         new FileInputStream(file);
