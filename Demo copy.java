@@ -6,7 +6,6 @@ public class Hello{
 	 logger.info("Hello");
 	logger.info("Hello");
 	logger.info("Hello");
-
 	  
 	logger.info("Hello");
 	logger.info("Hello");
